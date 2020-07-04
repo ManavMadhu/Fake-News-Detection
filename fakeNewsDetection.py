@@ -41,3 +41,10 @@ print(f'Accuracy: {round(score*100,2)}%')
 #----------------------------------------Confusion Matrix--------------------------------------------------------
 
 confusion_matrix(y_test,y_pred,labels=['FAKE','REAL'])
+
+joblib_LR_model = joblib.load(joblib_file)
+joblib_LR_model
+
+y_pred=pac.predict(tfidf_test)
+score=accuracy_score(y_test,y_pred)
+print(f'Accuracy: {round(score*100,2)}%')
